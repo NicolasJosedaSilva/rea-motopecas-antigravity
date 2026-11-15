@@ -15,6 +15,7 @@ from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 from .catalog import BIKES
 from .db import connect, initialize
+from .ledger import record_movement
 
 BASE = Path(__file__).resolve().parent.parent
 STATIC = BASE / "static"
@@ -154,6 +155,8 @@ def make_app() -> FastAPI:
                         raise HTTPException(409, "Estoque alterado durante o pedido")
                     db.execute("INSERT INTO order_items(order_id,product_id,quantity,unit_price_cents) VALUES (?,?,?,?)",
                                (order_id, pid, qty, cents))
+                    # Ledger: o movimento nasce na MESMA transação do UPDATE de estoque.
+                    record_movement(db, pid, -qty, "SALE", "pedido demonstrativo", order_id=order_id)
                 db.execute("COMMIT")
                 return {"order_id": order_id, "total_cents": total, "status": "SIMULADO",
                         "payment_processed": False, "replayed": False}
