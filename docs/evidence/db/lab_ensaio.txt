@@ -1,0 +1,16 @@
+﻿Base pronta: 12 produtos (baseline, sem ledger)
+Backup completo: lab_rota2_baseline.db | sha256: 47d09246eaf5ac72b89c49752d247b0271e40a2776202902547d8979ac5dc5a6
+RESTORE PASS: lab_rota2_baseline_restored.db | produtos: 12 | integrity=ok | FK violadas: 0 | sem ledger (baseline) | sha256 confere
+Migrações aplicadas: 001_inventory_ledger
+ATENÇÃO: não rode pedidos pela API num banco que não use o código com ledger integrado.
+SQLite: 3.50.4 integrity: ok FK violations: 0 ledger discrepancies: 0
+PASS: conciliação e integridade. Este PASS não prova integração com API/CLI.
+SKU: R2-FR-001 de: 20 para: 25 delta: 5
+SQLite: 3.50.4 integrity: ok FK violations: 0 ledger discrepancies: 0
+PASS: conciliação e integridade. Este PASS não prova integração com API/CLI.
+Backup completo: lab_rota2_pos_migracao.db | sha256: 738d15167c82e5725695a9889161b4ba9b26e271133f23e64f6c293a84a495c6
+RESTORE PASS: lab_rota2_pos_migracao_restored.db | produtos: 12 | integrity=ok | FK violadas: 0 | ledger conciliado | sha256 confere
+--- RED deliberado: UPDATE de estoque SEM movimento ---
+SQLite: 3.50.4 integrity: ok FK violations: 0 ledger discrepancies: 1
+{'sku': 'R2-FR-002', 'stock': 17, 'ledger_balance': 18}
+codigo de saida do verify: 2

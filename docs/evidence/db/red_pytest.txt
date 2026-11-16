@@ -1,0 +1,551 @@
+﻿EEEEEEEEEEF.EEEFFFFFEFFFFFFFFFFFFF                                       [100%]
+=================================== ERRORS ====================================
+________ ERROR at setup of test_baseline_has_four_tables_and_no_ledger ________
+
+tmp_path = WindowsPath('C:/Users/code/AppData/Local/Temp/pytest-of-code/pytest-1/test_baseline_has_four_tables_0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000002AAAD9D3A80>
+
+    @pytest.fixture
+    def legacy_db(tmp_path, monkeypatch):
+        """Baseline: banco como na versÒo original (4 tabelas, 12 produtos, SEM ledger)."""
+        monkeypatch.setenv("MOTO_DB_PATH", str(tmp_path / "lab_teste.db"))
+        from app.db import initialize
+>       initialize(migrate=False)
+E       TypeError: initialize() got an unexpected keyword argument 'migrate'
+
+tests\ledger_support.py:29: TypeError
+_ ERROR at setup of test_migration_001_is_additive_and_records_opening_balance _
+
+tmp_path = WindowsPath('C:/Users/code/AppData/Local/Temp/pytest-of-code/pytest-1/test_migration_001_is_additive0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000002AAAD9D3820>
+
+    @pytest.fixture
+    def legacy_db(tmp_path, monkeypatch):
+        """Baseline: banco como na versÒo original (4 tabelas, 12 produtos, SEM ledger)."""
+        monkeypatch.setenv("MOTO_DB_PATH", str(tmp_path / "lab_teste.db"))
+        from app.db import initialize
+>       initialize(migrate=False)
+E       TypeError: initialize() got an unexpected keyword argument 'migrate'
+
+tests\ledger_support.py:29: TypeError
+_______________ ERROR at setup of test_migration_is_idempotent ________________
+
+tmp_path = WindowsPath('C:/Users/code/AppData/Local/Temp/pytest-of-code/pytest-1/test_migration_is_idempotent0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000002AAADB1C830>
+
+    @pytest.fixture
+    def legacy_db(tmp_path, monkeypatch):
+        """Baseline: banco como na versÒo original (4 tabelas, 12 produtos, SEM ledger)."""
+        monkeypatch.setenv("MOTO_DB_PATH", str(tmp_path / "lab_teste.db"))
+        from app.db import initialize
+>       initialize(migrate=False)
+E       TypeError: initialize() got an unexpected keyword argument 'migrate'
+
+tests\ledger_support.py:29: TypeError
+______ ERROR at setup of test_migration_does_not_reconstruct_past_sales _______
+
+tmp_path = WindowsPath('C:/Users/code/AppData/Local/Temp/pytest-of-code/pytest-1/test_migration_does_not_recons0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000002AAADB7C8D0>
+
+    @pytest.fixture
+    def legacy_db(tmp_path, monkeypatch):
+        """Baseline: banco como na versÒo original (4 tabelas, 12 produtos, SEM ledger)."""
+        monkeypatch.setenv("MOTO_DB_PATH", str(tmp_path / "lab_teste.db"))
+        from app.db import initialize
+>       initialize(migrate=False)
+E       TypeError: initialize() got an unexpected keyword argument 'migrate'
+
+tests\ledger_support.py:29: TypeError
+_ ERROR at setup of test_fresh_initialize_applies_migration_and_opening_balance _
+
+    @pytest.fixture
+    def ledger():
+>       from app import ledger as module
+E       ImportError: cannot import name 'ledger' from 'app' (C:\Users\code\Downloads\trrabalho 2 ponto fernando\rota2-db\app\__init__.py)
+
+tests\ledger_support.py:14: ImportError
+____ ERROR at setup of test_red_stock_update_without_movement_is_detected _____
+
+    @pytest.fixture
+    def ledger():
+>       from app import ledger as module
+E       ImportError: cannot import name 'ledger' from 'app' (C:\Users\code\Downloads\trrabalho 2 ponto fernando\rota2-db\app\__init__.py)
+
+tests\ledger_support.py:14: ImportError
+___ ERROR at setup of test_adjust_stock_writes_movement_in_same_transaction ___
+
+    @pytest.fixture
+    def ledger():
+>       from app import ledger as module
+E       ImportError: cannot import name 'ledger' from 'app' (C:\Users\code\Downloads\trrabalho 2 ponto fernando\rota2-db\app\__init__.py)
+
+tests\ledger_support.py:14: ImportError
+_______ ERROR at setup of test_adjust_failure_leaves_no_partial_effect ________
+
+    @pytest.fixture
+    def ledger():
+>       from app import ledger as module
+E       ImportError: cannot import name 'ledger' from 'app' (C:\Users\code\Downloads\trrabalho 2 ponto fernando\rota2-db\app\__init__.py)
+
+tests\ledger_support.py:14: ImportError
+_____ ERROR at setup of test_adjust_rejects_invalid_input_without_writing _____
+
+    @pytest.fixture
+    def ledger():
+>       from app import ledger as module
+E       ImportError: cannot import name 'ledger' from 'app' (C:\Users\code\Downloads\trrabalho 2 ponto fernando\rota2-db\app\__init__.py)
+
+tests\ledger_support.py:14: ImportError
+________________ ERROR at setup of test_ledger_is_append_only _________________
+
+    @pytest.fixture
+    def ledger():
+>       from app import ledger as module
+E       ImportError: cannot import name 'ledger' from 'app' (C:\Users\code\Downloads\trrabalho 2 ponto fernando\rota2-db\app\__init__.py)
+
+tests\ledger_support.py:14: ImportError
+________ ERROR at setup of test_failed_migration_is_fully_rolled_back _________
+
+tmp_path = WindowsPath('C:/Users/code/AppData/Local/Temp/pytest-of-code/pytest-1/test_failed_migration_is_fully0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000002AAADA17F50>
+
+    @pytest.fixture
+    def legacy_db(tmp_path, monkeypatch):
+        """Baseline: banco como na versÒo original (4 tabelas, 12 produtos, SEM ledger)."""
+        monkeypatch.setenv("MOTO_DB_PATH", str(tmp_path / "lab_teste.db"))
+        from app.db import initialize
+>       initialize(migrate=False)
+E       TypeError: initialize() got an unexpected keyword argument 'migrate'
+
+tests\ledger_support.py:29: TypeError
+____ ERROR at setup of test_rollback_restores_baseline_and_preserves_data _____
+
+tmp_path = WindowsPath('C:/Users/code/AppData/Local/Temp/pytest-of-code/pytest-1/test_rollback_restores_baselin0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000002AAADB4C050>
+
+    @pytest.fixture
+    def legacy_db(tmp_path, monkeypatch):
+        """Baseline: banco como na versÒo original (4 tabelas, 12 produtos, SEM ledger)."""
+        monkeypatch.setenv("MOTO_DB_PATH", str(tmp_path / "lab_teste.db"))
+        from app.db import initialize
+>       initialize(migrate=False)
+E       TypeError: initialize() got an unexpected keyword argument 'migrate'
+
+tests\ledger_support.py:29: TypeError
+__ ERROR at setup of test_initialize_fails_closed_when_migration_is_pending ___
+
+tmp_path = WindowsPath('C:/Users/code/AppData/Local/Temp/pytest-of-code/pytest-1/test_initialize_fails_closed_w0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000002AAADBD3CD0>
+
+    @pytest.fixture
+    def legacy_db(tmp_path, monkeypatch):
+        """Baseline: banco como na versÒo original (4 tabelas, 12 produtos, SEM ledger)."""
+        monkeypatch.setenv("MOTO_DB_PATH", str(tmp_path / "lab_teste.db"))
+        from app.db import initialize
+>       initialize(migrate=False)
+E       TypeError: initialize() got an unexpected keyword argument 'migrate'
+
+tests\ledger_support.py:29: TypeError
+_ ERROR at setup of test_cli_fails_closed_on_legacy_db_then_migrate_fixes_it __
+
+tmp_path = WindowsPath('C:/Users/code/AppData/Local/Temp/pytest-of-code/pytest-1/test_cli_fails_closed_on_legac0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000002AAADB746D0>
+
+    @pytest.fixture
+    def legacy_db(tmp_path, monkeypatch):
+        """Baseline: banco como na versÒo original (4 tabelas, 12 produtos, SEM ledger)."""
+        monkeypatch.setenv("MOTO_DB_PATH", str(tmp_path / "lab_teste.db"))
+        from app.db import initialize
+>       initialize(migrate=False)
+E       TypeError: initialize() got an unexpected keyword argument 'migrate'
+
+tests\ledger_support.py:29: TypeError
+================================== FAILURES ===================================
+_________________ test_ledger_constraints_reject_invalid_rows _________________
+
+ledger_db = None
+
+    def test_ledger_constraints_reject_invalid_rows(ledger_db):
+        from app.db import connect
+        insert = ("INSERT INTO inventory_movements(product_id,delta_qty,movement_type,order_id,reason) "
+                  "VALUES (?,?,?,?,?)")
+        invalid = [
+            (1, 0, "ADJUSTMENT", None, "delta zero nao permitido"),
+            (1, 5, "SALE", "DEMO-T1", "venda com delta positivo"),
+            (1, -5, "SALE", None, "venda sem pedido"),
+            (1, -5, "ADJUSTMENT", "DEMO-T1", "ajuste nao tem pedido"),
+            (1, 5, "ADJUSTMENT", None, "abc"),
+            (999, 5, "ADJUSTMENT", None, "produto inexistente"),
+            (1, 5, "OPENING", None, "abertura duplicada"),
+            (1, 5, "XPTO", None, "tipo desconhecido"),
+        ]
+        with connect() as db:
+            db.execute("INSERT INTO orders(id,idempotency_key,request_digest,total_cents) VALUES ('DEMO-T1','chave-teste-1','x',0)")
+            for row in invalid:
+                with pytest.raises(sqlite3.IntegrityError):
+>                   db.execute(insert, row)
+E                   sqlite3.OperationalError: no such table: inventory_movements
+
+tests\test_db_ledger.py:156: OperationalError
+________________ test_cli_stock_registers_adjustment_movement _________________
+
+ledger_db = None
+
+    def test_cli_stock_registers_adjustment_movement(ledger_db):
+        r = run_cli("stock", "R2-FR-001", "37", "--reason", "inventario-aula")
+>       assert r.returncode == 0, r.stderr
+E       AssertionError: usage: python.exe -m app.manage [-h] {orders,stock} ...
+E         python.exe -m app.manage: error: unrecognized arguments: --reason inventario-aula
+E         
+E       assert 2 == 0
+E        +  where 2 = CompletedProcess(args=['C:\\Users\\code\\Downloads\\trrabalho 2 ponto fernando\\rota2-db\\.venv\\Scripts\\python.exe',...p.manage [-h] {orders,stock} ...\npython.exe -m app.manage: error: unrecognized arguments: --reason inventario-aula\n').returncode
+
+tests\test_cli_ledger.py:12: AssertionError
+________________ test_cli_stock_without_reason_keeps_old_usage ________________
+
+ledger_db = None
+
+    def test_cli_stock_without_reason_keeps_old_usage(ledger_db):
+        """RegressÒo: 'stock SKU QTD' (sem --reason) continua funcionando."""
+        r = run_cli("stock", "R2-FR-001", "37")
+        assert r.returncode == 0, r.stderr
+>       assert q("SELECT reason FROM inventory_movements WHERE movement_type='ADJUSTMENT'") == \
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            [("ajuste administrativo via CLI",)]
+
+tests\test_cli_ledger.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+sql = "SELECT reason FROM inventory_movements WHERE movement_type='ADJUSTMENT'"
+args = ()
+
+    def q(sql, args=()):
+        """Consulta em SQL puro no banco apontado por MOTO_DB_PATH; devolve lista de tuplas."""
+        from app.db import connect
+        with connect() as db:
+>           return [tuple(r) for r in db.execute(sql, args).fetchall()]
+                                      ^^^^^^^^^^^^^^^^^^^^^
+E           sqlite3.OperationalError: no such table: inventory_movements
+
+tests\ledger_support.py:44: OperationalError
+______________ test_cli_stock_same_quantity_creates_no_movement _______________
+
+ledger_db = None
+
+    def test_cli_stock_same_quantity_creates_no_movement(ledger_db):
+        assert run_cli("stock", "R2-FR-001", "20").returncode == 0
+>       assert q(ADJUSTMENTS) == [(0,)]
+               ^^^^^^^^^^^^^^
+
+tests\test_cli_ledger.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+sql = "SELECT COUNT(*) FROM inventory_movements WHERE movement_type='ADJUSTMENT'"
+args = ()
+
+    def q(sql, args=()):
+        """Consulta em SQL puro no banco apontado por MOTO_DB_PATH; devolve lista de tuplas."""
+        from app.db import connect
+        with connect() as db:
+>           return [tuple(r) for r in db.execute(sql, args).fetchall()]
+                                      ^^^^^^^^^^^^^^^^^^^^^
+E           sqlite3.OperationalError: no such table: inventory_movements
+
+tests\ledger_support.py:44: OperationalError
+_______________ test_cli_rejects_invalid_input_without_writing ________________
+
+ledger_db = None
+
+    def test_cli_rejects_invalid_input_without_writing(ledger_db):
+        for args in (("R2-FR-001", "-3"), ("R2-FR-001", "100000"), ("NAO-EXISTE", "5"),
+                     ("R2-FR-001", "5", "--reason", "abc")):
+            assert run_cli("stock", *args).returncode != 0, args
+        assert q(STOCK_R2_FR_001) == [(20,)]
+>       assert q(ADJUSTMENTS) == [(0,)]
+               ^^^^^^^^^^^^^^
+
+tests\test_cli_ledger.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+sql = "SELECT COUNT(*) FROM inventory_movements WHERE movement_type='ADJUSTMENT'"
+args = ()
+
+    def q(sql, args=()):
+        """Consulta em SQL puro no banco apontado por MOTO_DB_PATH; devolve lista de tuplas."""
+        from app.db import connect
+        with connect() as db:
+>           return [tuple(r) for r in db.execute(sql, args).fetchall()]
+                                      ^^^^^^^^^^^^^^^^^^^^^
+E           sqlite3.OperationalError: no such table: inventory_movements
+
+tests\ledger_support.py:44: OperationalError
+_______________ test_cli_reconcile_pass_and_detects_divergence ________________
+
+ledger_db = None
+
+    def test_cli_reconcile_pass_and_detects_divergence(ledger_db):
+        ok = run_cli("reconcile")
+>       assert ok.returncode == 0, ok.stdout + ok.stderr
+E       AssertionError: usage: python.exe -m app.manage [-h] {orders,stock} ...
+E         python.exe -m app.manage: error: argument command: invalid choice: 'reconcile' (choose from orders, stock)
+E         
+E       assert 2 == 0
+E        +  where 2 = CompletedProcess(args=['C:\\Users\\code\\Downloads\\trrabalho 2 ponto fernando\\rota2-db\\.venv\\Scripts\\python.exe',...ck} ...\npython.exe -m app.manage: error: argument command: invalid choice: 'reconcile' (choose from orders, stock)\n").returncode
+
+tests\test_cli_ledger.py:43: AssertionError
+___________________ test_cli_rollback_requires_confirmation ___________________
+
+ledger_db = None
+
+    def test_cli_rollback_requires_confirmation(ledger_db):
+        assert run_cli("rollback").returncode != 0
+>       assert q("SELECT COUNT(*) FROM sqlite_master WHERE name='inventory_movements'") == [(1,)]
+E       assert [(0,)] == [(1,)]
+E         
+E         At index 0 diff: (0,) != (1,)
+E         Use -v to get more diff
+
+tests\test_cli_ledger.py:68: AssertionError
+______________________ test_cli_movements_lists_history _______________________
+
+ledger_db = None
+
+    def test_cli_movements_lists_history(ledger_db):
+>       assert run_cli("stock", "R2-FR-001", "22", "--reason", "contagem-ciclica").returncode == 0
+E       AssertionError: assert 2 == 0
+E        +  where 2 = CompletedProcess(args=['C:\\Users\\code\\Downloads\\trrabalho 2 ponto fernando\\rota2-db\\.venv\\Scripts\\python.exe',....manage [-h] {orders,stock} ...\npython.exe -m app.manage: error: unrecognized arguments: --reason contagem-ciclica\n').returncode
+E        +    where CompletedProcess(args=['C:\\Users\\code\\Downloads\\trrabalho 2 ponto fernando\\rota2-db\\.venv\\Scripts\\python.exe',....manage [-h] {orders,stock} ...\npython.exe -m app.manage: error: unrecognized arguments: --reason contagem-ciclica\n') = run_cli('stock', 'R2-FR-001', '22', '--reason', 'contagem-ciclica')
+
+tests\test_cli_ledger.py:75: AssertionError
+______________________ test_lab_refuses_non_lab_database ______________________
+
+tmp_path = WindowsPath('C:/Users/code/AppData/Local/Temp/pytest-of-code/pytest-1/test_lab_refuses_non_lab_datab0')
+
+    def test_lab_refuses_non_lab_database(tmp_path):
+        r = run_lab("init", "--db", str(tmp_path / "producao.db"))
+        assert r.returncode != 0
+>       assert "SEGURANÃA" in r.stderr
+E       assert 'SEGURANÃA' in "C:\\Users\\code\\Downloads\\trrabalho 2 ponto fernando\\rota2-db\\.venv\\Scripts\\python.exe: can't open file 'C:\\\\...ds\\\\trrabalho 2 ponto fernando\\\\rota2-db\\\\scripts\\\\lab_db_extension.py': [Errno 2] No such file or directory\n"
+E        +  where "C:\\Users\\code\\Downloads\\trrabalho 2 ponto fernando\\rota2-db\\.venv\\Scripts\\python.exe: can't open file 'C:\\\\...ds\\\\trrabalho 2 ponto fernando\\\\rota2-db\\\\scripts\\\\lab_db_extension.py': [Errno 2] No such file or directory\n" = CompletedProcess(args=['C:\\Users\\code\\Downloads\\trrabalho 2 ponto fernando\\rota2-db\\.venv\\Scripts\\python.exe',...s\\\\trrabalho 2 ponto fernando\\\\rota2-db\\\\scripts\\\\lab_db_extension.py': [Errno 2] No such file or directory\n").stderr
+
+tests\test_lab_script.py:14: AssertionError
+____________ test_lab_full_sequence_with_two_backup_restore_cycles ____________
+
+tmp_path = WindowsPath('C:/Users/code/AppData/Local/Temp/pytest-of-code/pytest-1/test_lab_full_sequence_with_tw0')
+
+    def test_lab_full_sequence_with_two_backup_restore_cycles(tmp_path):
+        steps = [
+            (("init",), 0, "Base pronta: 12"),
+            (("backup", "--label", "baseline"), 0, "sha256"),
+            (("restore", "--label", "baseline"), 0, "RESTORE PASS"),
+            (("verify",), 3, "N├O VERIFICADO"),                    # baseline: sem ledger, sem falso PASS
+            (("migrate",), 0, "001_inventory_ledger"),
+            (("migrate",), 0, "jß aplicada"),                      # idempotente
+            (("verify",), 0, "PASS"),
+            (("adjust", "--sku", "R2-FR-001", "--quantity", "25", "--reason", "inventario-aula"), 0, "delta: 5"),
+            (("verify",), 0, "PASS"),
+            (("backup", "--label", "pos_migracao"), 0, "sha256"),
+            (("restore", "--label", "pos_migracao"), 0, "ledger conciliado"),
+        ]
+        for args, expected_rc, expected_text in steps:
+            r = lab(tmp_path, *args)
+>           assert r.returncode == expected_rc, (args, r.stdout, r.stderr)
+E           AssertionError: (('init',), '', "C:\\Users\\code\\Downloads\\trrabalho 2 ponto fernando\\rota2-db\\.venv\\Scripts\\python.exe: can't o...s\\\\trrabalho 2 ponto fernando\\\\rota2-db\\\\scripts\\\\lab_db_extension.py': [Errno 2] No such file or directory
+E             ")
+E           assert 2 == 0
+E            +  where 2 = CompletedProcess(args=['C:\\Users\\code\\Downloads\\trrabalho 2 ponto fernando\\rota2-db\\.venv\\Scripts\\python.exe',...s\\\\trrabalho 2 ponto fernando\\\\rota2-db\\\\scripts\\\\lab_db_extension.py': [Errno 2] No such file or directory\n").returncode
+
+tests\test_lab_script.py:34: AssertionError
+_____________________ test_lab_verify_detects_divergence ______________________
+
+tmp_path = WindowsPath('C:/Users/code/AppData/Local/Temp/pytest-of-code/pytest-1/test_lab_verify_detects_diverg0')
+
+    def test_lab_verify_detects_divergence(tmp_path):
+>       assert lab(tmp_path, "init").returncode == 0
+E       assert 2 == 0
+E        +  where 2 = CompletedProcess(args=['C:\\Users\\code\\Downloads\\trrabalho 2 ponto fernando\\rota2-db\\.venv\\Scripts\\python.exe',...s\\\\trrabalho 2 ponto fernando\\\\rota2-db\\\\scripts\\\\lab_db_extension.py': [Errno 2] No such file or directory\n").returncode
+E        +    where CompletedProcess(args=['C:\\Users\\code\\Downloads\\trrabalho 2 ponto fernando\\rota2-db\\.venv\\Scripts\\python.exe',...s\\\\trrabalho 2 ponto fernando\\\\rota2-db\\\\scripts\\\\lab_db_extension.py': [Errno 2] No such file or directory\n") = lab(WindowsPath('C:/Users/code/AppData/Local/Temp/pytest-of-code/pytest-1/test_lab_verify_detects_diverg0'), 'init')
+
+tests\test_lab_script.py:42: AssertionError
+_____________ test_lab_backup_refuses_overwrite_and_records_hash ______________
+
+tmp_path = WindowsPath('C:/Users/code/AppData/Local/Temp/pytest-of-code/pytest-1/test_lab_backup_refuses_overwr0')
+
+    def test_lab_backup_refuses_overwrite_and_records_hash(tmp_path):
+>       assert lab(tmp_path, "init").returncode == 0
+E       assert 2 == 0
+E        +  where 2 = CompletedProcess(args=['C:\\Users\\code\\Downloads\\trrabalho 2 ponto fernando\\rota2-db\\.venv\\Scripts\\python.exe',...s\\\\trrabalho 2 ponto fernando\\\\rota2-db\\\\scripts\\\\lab_db_extension.py': [Errno 2] No such file or directory\n").returncode
+E        +    where CompletedProcess(args=['C:\\Users\\code\\Downloads\\trrabalho 2 ponto fernando\\rota2-db\\.venv\\Scripts\\python.exe',...s\\\\trrabalho 2 ponto fernando\\\\rota2-db\\\\scripts\\\\lab_db_extension.py': [Errno 2] No such file or directory\n") = lab(WindowsPath('C:/Users/code/AppData/Local/Temp/pytest-of-code/pytest-1/test_lab_backup_refuses_overwr0'), 'init')
+
+tests\test_lab_script.py:52: AssertionError
+__________________ test_lab_restore_detects_tampered_backup ___________________
+
+tmp_path = WindowsPath('C:/Users/code/AppData/Local/Temp/pytest-of-code/pytest-1/test_lab_restore_detects_tampe0')
+
+    def test_lab_restore_detects_tampered_backup(tmp_path):
+>       assert lab(tmp_path, "init").returncode == 0
+E       assert 2 == 0
+E        +  where 2 = CompletedProcess(args=['C:\\Users\\code\\Downloads\\trrabalho 2 ponto fernando\\rota2-db\\.venv\\Scripts\\python.exe',...s\\\\trrabalho 2 ponto fernando\\\\rota2-db\\\\scripts\\\\lab_db_extension.py': [Errno 2] No such file or directory\n").returncode
+E        +    where CompletedProcess(args=['C:\\Users\\code\\Downloads\\trrabalho 2 ponto fernando\\rota2-db\\.venv\\Scripts\\python.exe',...s\\\\trrabalho 2 ponto fernando\\\\rota2-db\\\\scripts\\\\lab_db_extension.py': [Errno 2] No such file or directory\n") = lab(WindowsPath('C:/Users/code/AppData/Local/Temp/pytest-of-code/pytest-1/test_lab_restore_detects_tampe0'), 'init')
+
+tests\test_lab_script.py:61: AssertionError
+___________________ test_lab_rollback_requires_confirmation ___________________
+
+tmp_path = WindowsPath('C:/Users/code/AppData/Local/Temp/pytest-of-code/pytest-1/test_lab_rollback_requires_con0')
+
+    def test_lab_rollback_requires_confirmation(tmp_path):
+>       assert lab(tmp_path, "init").returncode == 0
+E       assert 2 == 0
+E        +  where 2 = CompletedProcess(args=['C:\\Users\\code\\Downloads\\trrabalho 2 ponto fernando\\rota2-db\\.venv\\Scripts\\python.exe',...s\\\\trrabalho 2 ponto fernando\\\\rota2-db\\\\scripts\\\\lab_db_extension.py': [Errno 2] No such file or directory\n").returncode
+E        +    where CompletedProcess(args=['C:\\Users\\code\\Downloads\\trrabalho 2 ponto fernando\\rota2-db\\.venv\\Scripts\\python.exe',...s\\\\trrabalho 2 ponto fernando\\\\rota2-db\\\\scripts\\\\lab_db_extension.py': [Errno 2] No such file or directory\n") = lab(WindowsPath('C:/Users/code/AppData/Local/Temp/pytest-of-code/pytest-1/test_lab_rollback_requires_con0'), 'init')
+
+tests\test_lab_script.py:72: AssertionError
+_____________ test_order_registers_sale_movements_and_reconciles ______________
+
+client = <starlette.testclient.TestClient object at 0x000002AAADC0D010>
+
+    def test_order_registers_sale_movements_and_reconciles(client):
+        r = order(client, [{"product_id": 1, "quantity": 2}, {"product_id": 3, "quantity": 1}])
+        assert r.status_code == 201, r.text
+>       rows = q("SELECT product_id, delta_qty, movement_type FROM inventory_movements "
+                 "WHERE order_id = ? ORDER BY product_id", (r.json()["order_id"],))
+
+tests\test_api_ledger.py:18: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+sql = 'SELECT product_id, delta_qty, movement_type FROM inventory_movements WHERE order_id = ? ORDER BY product_id'
+args = ('DEMO-92AA1119C85F',)
+
+    def q(sql, args=()):
+        """Consulta em SQL puro no banco apontado por MOTO_DB_PATH; devolve lista de tuplas."""
+        from app.db import connect
+        with connect() as db:
+>           return [tuple(r) for r in db.execute(sql, args).fetchall()]
+                                      ^^^^^^^^^^^^^^^^^^^^^
+E           sqlite3.OperationalError: no such table: inventory_movements
+
+tests\ledger_support.py:44: OperationalError
+_______________ test_idempotent_replay_creates_no_new_movements _______________
+
+client = <starlette.testclient.TestClient object at 0x000002AAADB4BB10>
+
+    def test_idempotent_replay_creates_no_new_movements(client):
+        key = str(uuid.uuid4())
+        body = [{"product_id": 3, "quantity": 2}]
+        assert order(client, body, key).status_code == 201
+>       movements = q("SELECT COUNT(*) FROM inventory_movements")
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_api_ledger.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+sql = 'SELECT COUNT(*) FROM inventory_movements', args = ()
+
+    def q(sql, args=()):
+        """Consulta em SQL puro no banco apontado por MOTO_DB_PATH; devolve lista de tuplas."""
+        from app.db import connect
+        with connect() as db:
+>           return [tuple(r) for r in db.execute(sql, args).fetchall()]
+                                      ^^^^^^^^^^^^^^^^^^^^^
+E           sqlite3.OperationalError: no such table: inventory_movements
+
+tests\ledger_support.py:44: OperationalError
+__________________ test_rejected_order_creates_no_movements ___________________
+
+client = <starlette.testclient.TestClient object at 0x000002AAADCD2710>
+
+    def test_rejected_order_creates_no_movements(client):
+>       movements = q("SELECT COUNT(*) FROM inventory_movements")
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_api_ledger.py:37: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+sql = 'SELECT COUNT(*) FROM inventory_movements', args = ()
+
+    def q(sql, args=()):
+        """Consulta em SQL puro no banco apontado por MOTO_DB_PATH; devolve lista de tuplas."""
+        from app.db import connect
+        with connect() as db:
+>           return [tuple(r) for r in db.execute(sql, args).fetchall()]
+                                      ^^^^^^^^^^^^^^^^^^^^^
+E           sqlite3.OperationalError: no such table: inventory_movements
+
+tests\ledger_support.py:44: OperationalError
+_______________ test_ledger_failure_rolls_back_the_whole_order ________________
+
+client = <starlette.testclient.TestClient object at 0x000002AAADAC7950>
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000002AAADCB5E10>
+
+    def test_ledger_failure_rolls_back_the_whole_order(client, monkeypatch):
+        """G-DB3: falha no meio do pedido nÒo deixa estoque, pedido, itens ou movimentos parciais."""
+        import app.main as main_module
+        products = q("SELECT id, stock FROM products ORDER BY id")
+>       movements = q("SELECT COUNT(*) FROM inventory_movements")
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_api_ledger.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+sql = 'SELECT COUNT(*) FROM inventory_movements', args = ()
+
+    def q(sql, args=()):
+        """Consulta em SQL puro no banco apontado por MOTO_DB_PATH; devolve lista de tuplas."""
+        from app.db import connect
+        with connect() as db:
+>           return [tuple(r) for r in db.execute(sql, args).fetchall()]
+                                      ^^^^^^^^^^^^^^^^^^^^^
+E           sqlite3.OperationalError: no such table: inventory_movements
+
+tests\ledger_support.py:44: OperationalError
+___________________ test_concurrent_orders_cannot_oversell ____________________
+
+client = <starlette.testclient.TestClient object at 0x000002AAADCF82B0>
+
+    def test_concurrent_orders_cannot_oversell(client):
+        """Dois pedidos simultÔneos de 3 unidades para 5 em estoque: um vence, o outro recebe 409."""
+        from app.db import connect
+>       from app.ledger import adjust_stock
+E       ModuleNotFoundError: No module named 'app.ledger'
+
+tests\test_api_ledger.py:70: ModuleNotFoundError
+============================== warnings summary ===============================
+.venv\Lib\site-packages\fastapi\testclient.py:1
+  C:\Users\code\Downloads\trrabalho 2 ponto fernando\rota2-db\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests/test_db_ledger.py::test_ledger_constraints_reject_invalid_rows
+FAILED tests/test_cli_ledger.py::test_cli_stock_registers_adjustment_movement
+FAILED tests/test_cli_ledger.py::test_cli_stock_without_reason_keeps_old_usage
+FAILED tests/test_cli_ledger.py::test_cli_stock_same_quantity_creates_no_movement
+FAILED tests/test_cli_ledger.py::test_cli_rejects_invalid_input_without_writing
+FAILED tests/test_cli_ledger.py::test_cli_reconcile_pass_and_detects_divergence
+FAILED tests/test_cli_ledger.py::test_cli_rollback_requires_confirmation - as...
+FAILED tests/test_cli_ledger.py::test_cli_movements_lists_history - Assertion...
+FAILED tests/test_lab_script.py::test_lab_refuses_non_lab_database - assert '...
+FAILED tests/test_lab_script.py::test_lab_full_sequence_with_two_backup_restore_cycles
+FAILED tests/test_lab_script.py::test_lab_verify_detects_divergence - assert ...
+FAILED tests/test_lab_script.py::test_lab_backup_refuses_overwrite_and_records_hash
+FAILED tests/test_lab_script.py::test_lab_restore_detects_tampered_backup - a...
+FAILED tests/test_lab_script.py::test_lab_rollback_requires_confirmation - as...
+FAILED tests/test_api_ledger.py::test_order_registers_sale_movements_and_reconciles
+FAILED tests/test_api_ledger.py::test_idempotent_replay_creates_no_new_movements
+FAILED tests/test_api_ledger.py::test_rejected_order_creates_no_movements - s...
+FAILED tests/test_api_ledger.py::test_ledger_failure_rolls_back_the_whole_order
+FAILED tests/test_api_ledger.py::test_concurrent_orders_cannot_oversell - Mod...
+ERROR tests/test_db_ledger.py::test_baseline_has_four_tables_and_no_ledger - ...
+ERROR tests/test_db_ledger.py::test_migration_001_is_additive_and_records_opening_balance
+ERROR tests/test_db_ledger.py::test_migration_is_idempotent - TypeError: init...
+ERROR tests/test_db_ledger.py::test_migration_does_not_reconstruct_past_sales
+ERROR tests/test_db_ledger.py::test_fresh_initialize_applies_migration_and_opening_balance
+ERROR tests/test_db_ledger.py::test_red_stock_update_without_movement_is_detected
+ERROR tests/test_db_ledger.py::test_adjust_stock_writes_movement_in_same_transaction
+ERROR tests/test_db_ledger.py::test_adjust_failure_leaves_no_partial_effect
+ERROR tests/test_db_ledger.py::test_adjust_rejects_invalid_input_without_writing
+ERROR tests/test_db_ledger.py::test_ledger_is_append_only - ImportError: cann...
+ERROR tests/test_db_ledger.py::test_failed_migration_is_fully_rolled_back - T...
+ERROR tests/test_db_ledger.py::test_rollback_restores_baseline_and_preserves_data
+ERROR tests/test_db_ledger.py::test_initialize_fails_closed_when_migration_is_pending
+ERROR tests/test_cli_ledger.py::test_cli_fails_closed_on_legacy_db_then_migrate_fixes_it
