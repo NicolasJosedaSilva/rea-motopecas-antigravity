@@ -134,7 +134,7 @@ scripts/gate.py      # Gate local reproduzível
 
 Consulte: [`docs/threat-model.md`](docs/threat-model.md), [OWASP ASVS 5.0](https://asvs.owasp.org/) e [LGPD](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm).
 
-## 7. Publicação no GitHub `Nícolas José da Silva,Pedro Henrique José Senna da Silva,Akyles Almeida Aquino,Pedro Henrique José Senna da Silva` — repositório PÚBLICO NOVO
+## 7. Publicação no GitHub `Nícolas José da Silva,Guilherme Azevedo,Akyles Almeida Aquino,Pedro Henrique José Senna da Silva` — repositório PÚBLICO NOVO
 
 O conector GitHub do ambiente atual possui acesso à conta **FGarcia9999**, mas não oferece ação de criação de repositório. O repositório ASF existente está **privado**, portanto não o utilize para satisfazer o requisito de publicação pública sem decisão explícita de mudar a visibilidade. **Nenhuma publicação foi realizada automaticamente nesta entrega.**
 
